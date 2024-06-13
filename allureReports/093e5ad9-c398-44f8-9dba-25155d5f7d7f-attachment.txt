@@ -1,0 +1,7 @@
+[32mINFO    [0m root:conftest.py:10 ============Test Case Started=============
+[32mINFO    [0m root:test_addCustomer.py:25 Started Test_003_AddCustomer at: 13-06-2024 01:35:06
+[32mINFO    [0m root:test_addCustomer.py:52 Providing Customer Information
+[32mINFO    [0m root:test_addCustomer.py:75 Saving Customer Information:13-06-2024 01:35:29
+[32mINFO    [0m root:test_addCustomer.py:76 Add Customer Validation is Started here:13-06-2024 01:35:29
+[32mINFO    [0m root:test_addCustomer.py:82 Add Customer Test Passed
+[32mINFO    [0m root:test_addCustomer.py:88 Add Customer Test Ends Up Here at: 13-06-2024 01:35:30
