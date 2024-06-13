@@ -1,0 +1,3 @@
+[32mINFO    [0m root:conftest.py:10 ============Test Case Started=============
+[32mINFO    [0m root:test_login.py:45 Started Login Test
+[32mINFO    [0m root:test_login.py:70 Login Test Passed

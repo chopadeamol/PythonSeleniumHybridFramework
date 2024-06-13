@@ -1,0 +1,5 @@
+[32mINFO    [0m root:conftest.py:11 ============Test Case Started=============
+[32mINFO    [0m root:test_login.py:18 Test_001_Login
+[32mINFO    [0m root:test_login.py:19 Home Page Title Page Test is started
+[32mINFO    [0m root:test_login.py:21 Opening URL
+[32mINFO    [0m root:test_login.py:34 Home Page Title Test Passed

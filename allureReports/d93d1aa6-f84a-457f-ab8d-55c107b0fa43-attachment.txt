@@ -1,0 +1,8 @@
+[32mINFO    [0m root:test_addCustomer.py:22 Started Test_003_AddCustomer at: 2024-06-12 09:51:09
+[32mINFO    [0m root:test_addCustomer.py:37 Login Successful at: 2024-06-12 09:51:13
+[32mINFO    [0m root:test_addCustomer.py:39 Starting Add Customer Test at: 2024-06-12 09:51:13
+[32mINFO    [0m root:test_addCustomer.py:48 Providing Customer Information
+[32mINFO    [0m root:test_addCustomer.py:71 Saving Customer Information:2024-06-12 09:51:31
+[32mINFO    [0m root:test_addCustomer.py:73 Add Customer Validation is Started here:2024-06-12 09:51:31
+[32mINFO    [0m root:test_addCustomer.py:79 .....Add Customer Test Passed.....
+[32mINFO    [0m root:test_addCustomer.py:85 Add Customer Test Ends Up Here at: 2024-06-12 09:51:31
