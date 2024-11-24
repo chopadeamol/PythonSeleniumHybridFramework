@@ -29,6 +29,7 @@ class Test_003_AddCustomer:
 
         with allure.step("Maximizing window"):
             self.driver.maximize_window()
+            time.sleep(5)
         self.lp = LoginPage(self.driver)
 
         with allure.step("Entering username"):
@@ -37,6 +38,12 @@ class Test_003_AddCustomer:
             self.lp.setPassword(self.password)
         with allure.step("Clicking login button"):
             self.lp.clickLogin()
+            # time.sleep(120)
+            # i = self.driver.get_frame('@src^https://challenges.cloudflare.com/cdn-cgi')
+            # if i:
+            #     e = i('.mark')
+            #     e.click()
+            # time.sleep(20)
         with allure.step(f"Login successful:{currentTimestamp()}"):
             pass
         with allure.step(f"Starting Add Customer Test at: {currentTimestamp()}"):

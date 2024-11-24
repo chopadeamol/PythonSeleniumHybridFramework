@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from pytest_metadata.plugin import metadata_key
 from utilities.customLogger import LogGenerator
+from selenium.webdriver.chrome.options import Options
 import subprocess
 logger = LogGenerator.genLog()
 
@@ -9,17 +10,48 @@ logger = LogGenerator.genLog()
 def setup(browser):
     logger.info(f"============Test Case Started=============")
     if browser == "chrome":
-        driver = webdriver.Chrome()
+        # driver = webdriver.ChromeOptions()
+        options = Options()
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        prefs = {
+            "credentials_enable_service": False,
+            "profile.password_manager_enabled": False
+        }
+        options.add_experimental_option("prefs", prefs)
+        options.add_argument("--headless")
+        driver = webdriver.Chrome(options=options)
         print("Launching chrome browser")
-        return driver
+        yield driver
+        logger.info("Test case execution completed")
+        driver.quit()
+
+
+
     elif browser == "firefox":
-        driver = webdriver.Firefox()
+        options = webdriver.FirefoxOptions()
+        # options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        # options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        # options.add_experimental_option('useAutomationExtension', False)
+        options.add_argument("--disable-extensions")
+        driver = webdriver.Firefox(options=options)
         print("Launching firefox browser")
         return driver
-    elif browser == "edge":
-        driver = webdriver.Edge()
+    elif browser == "Edge":
+        options = webdriver.EdgeOptions()
+        options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+        options.add_argument("--disable-extensions")
+        driver = webdriver.Edge(options=options)
         print("Launching edge browser")
         return driver
+    yield
+
+
 
 
 def pytest_addoption(parser):

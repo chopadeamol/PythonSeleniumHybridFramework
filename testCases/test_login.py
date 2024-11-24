@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from pageObjects.LoginPage import LoginPage
 from utilities.customLogger import LogGenerator
@@ -22,10 +24,9 @@ class Test_001_Login:
 
         with allure.step("Fetching URL and opening browser window"):
             self.driver.get(self.baseURL)
-
+            time.sleep(2)
         with allure.step("Maximizing window"):
             self.driver.maximize_window()
-
         with allure.step("Validating title of the web page"):
             actual_title = self.driver.title
 
